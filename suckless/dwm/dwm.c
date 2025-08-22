@@ -50,7 +50,6 @@
 #define INTERSECT(x,y,w,h,m)    (MAX(0, MIN((x)+(w),(m)->wx+(m)->ww) - MAX((x),(m)->wx)) \
                                * MAX(0, MIN((y)+(h),(m)->wy+(m)->wh) - MAX((y),(m)->wy)))
 #define ISVISIBLE(C)            ((C->tags & C->mon->tagset[C->mon->seltags]))
-#define LENGTH(X)               (sizeof X / sizeof X[0])
 #define MOUSEMASK               (BUTTONMASK|PointerMotionMask)
 #define WIDTH(X)                ((X)->w + 2 * (X)->bw)
 #define HEIGHT(X)               ((X)->h + 2 * (X)->bw)
@@ -745,7 +744,7 @@ drawbar(Monitor *m)
 
 	if ((w = m->ww - tw - x) > bh) {
 		if (m->sel) {
-			drw_setscheme(drw, scheme[SchemeNorm]);
+			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
 			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
 			if (m->sel->isfloating)
 				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
@@ -1853,7 +1852,7 @@ updatebarpos(Monitor *m)
 }
 
 void
-updateclientlist()
+updateclientlist(void)
 {
 	Client *c;
 	Monitor *m;

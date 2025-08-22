@@ -68,5 +68,5 @@ static const struct arg args[] = {
 	/* function format          argument */
 	{ datetime,     "%s | ",          "%F %T" },
 	{ wifi_essid,   "Wifi: %s | ",    "iwm0"  },
-	{ battery_perc, "Battery: %s%%",    NULL    },
+	{ battery_perc, "Battery: %s%%|",    NULL    },
 };
