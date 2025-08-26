@@ -81,6 +81,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *ranger[]   = { "st", "-e", "ranger", NULL};
 static const char *htop[]   = { "st", "-e", "htop", NULL};
+static const char *wttr[]   = { "st", "-e", "wttr", NULL};
 static const char *rss[]   = { "st", "-e", "newsboat", NULL};
 static const char *firefox[]  = { "firefox", NULL};
 
@@ -90,6 +91,7 @@ static const Key keys[] = {
 	{ MODKEY,             		    XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_e,      spawn,          {.v = ranger } },
     { MODKEY,                       XK_w,      spawn,          {.v = firefox } },
+    { MODKEY|ShiftMask,             XK_w,      spawn,          {.v = wttr } },
     { MODKEY,                       XK_f,      spawn,          {.v = rss } },
     { MODKEY,                       XK_b,      spawn,          {.v = htop } },
     { MODKEY,                       XK_t,      spawn,          SHCMD("maim ~/Pictures/$(date +%s).png") },

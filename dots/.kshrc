@@ -8,13 +8,7 @@ export CLICOLOR=1
 HISTFILE=$HOME/.ksh_history
 HISTSIZE=20000
 
-alias ..='cd ..'
-alias ...='cd ../..'
-#alias mkdir='mkdir -p'
-alias df='df -h'
-alias du='du -ch'
-alias weather='curl http://wttr.in/Nashville' 
-alias sv='doas env DISPLAY= vim'
+alias wttr='curl http://wttr.in/Natchitoches' 
 alias v='vim'
 alias ls='lsd'
 alias ll='lsd -l'
@@ -26,9 +20,9 @@ alias disks='sysctl hw.disknames'
 set -o vi
 
 # Define ANSI color escape sequences
-PURPLE='\033[0;35m'
+YELLOW='\033[0;33m'
 BLUE='\033[0;34m'
 RESET='\033[0m'
 
 # Set the PS1 prompt
-PS1='${PURPLE}${PWD} ${BLUE}> ${RESET}'
+PS1='${BLUE}\u${YELLOW}@${BLUE}\h${YELLOW}> ${RESET}'
