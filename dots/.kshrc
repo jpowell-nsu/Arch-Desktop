@@ -15,6 +15,7 @@ alias ll='lsd -l'
 alias la='lsd -lha'
 alias sensors='sysctl hw.sensors'
 alias disks='sysctl hw.disknames'
+alias poweroff='shutdown -p now'
 
 # Vi mode
 set -o vi

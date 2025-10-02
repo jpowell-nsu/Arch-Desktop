@@ -32,3 +32,4 @@ map <C-p> "+p
 
 set laststatus=2
 set statusline=%f\ %y\ %m\ %r\ %=%l:%c
+autocmd FileType make setlocal noexpandtab tabstop=8 shiftwidth=8
