@@ -11,11 +11,12 @@ HISTSIZE=20000
 alias wttr='curl http://wttr.in/Natchitoches' 
 alias v='vim'
 alias ls='lsd'
-alias ll='lsd -l'
+alias ll='lsd -lh'
 alias la='lsd -lha'
 alias sensors='sysctl hw.sensors'
 alias disks='sysctl hw.disknames'
 alias poweroff='shutdown -p now'
+alias make='make -j2'
 
 # Vi mode
 set -o vi
