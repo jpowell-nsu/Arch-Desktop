@@ -13,7 +13,7 @@ config.h:
 	cp config.def.h config.h
 
 .c.o:
-	$(CC) $(STCFLAGS) -c $<
+	$(CC) $(STCFLAGS) -O3 -c $<
 
 st.o: config.h st.h win.h
 x.o: arg.h config.h st.h win.h
@@ -24,7 +24,7 @@ st: $(OBJ)
 	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
 
 clean:
-	rm -f st $(OBJ) st-$(VERSION).tar.gz & cp config.h config.def.h
+	rm -f st $(OBJ) st-$(VERSION).tar.gz
 
 dist: clean
 	mkdir -p st-$(VERSION)

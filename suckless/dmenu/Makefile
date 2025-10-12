@@ -33,6 +33,7 @@ dist: clean
 	tar -cf dmenu-$(VERSION).tar dmenu-$(VERSION)
 	gzip dmenu-$(VERSION).tar
 	rm -rf dmenu-$(VERSION)
+	cp config.h config.def.h
 
 install: all
 	mkdir -p $(DESTDIR)$(PREFIX)/bin

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+cp dots/.* ~/ & cp -r dots/neomutt ~/ &&
+if [ ! -d ~/Media ]; then
+    mkdir ~/Media
+fi &&
+
+if [ ! -d ~/Media/Wallpapers ]; then
+    cp -r Wallpapers ~/Media
+else
+    cp -r Wallpapers/* ~/Media/Wallpapers
+fi &&
+
+cp -r Wallpapers ~/Media &
+cd suckless/dmenu &&  make && doas make install clean &&
+cd ../dwm &&  make && doas make install clean &&
+cd ../slock && make && doas make install clean &&
+cd ../st &&  doas make install clean && cd ../tabbed &&
+make && doas make install clean

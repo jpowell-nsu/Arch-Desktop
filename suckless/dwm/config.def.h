@@ -96,8 +96,6 @@ static const Key keys[] = {
     { MODKEY,                       XK_b,      spawn,          {.v = htop } },
     { MODKEY,                       XK_t,      spawn,          SHCMD("maim ~/Pictures/$(date +%s).png") },
     { Mod1Mask|ShiftMask,           XK_l,      spawn,          SHCMD("slock") },
-//    { Mod1Mask|ShiftMask,           XK_l,      spawn,          SHCMD("picom") },
-//    { Mod1Mask|ShiftMask,           XK_l,      spawn,          SHCMD("pgrep picom | xargs kill") },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
