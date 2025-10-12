@@ -6,8 +6,9 @@ MIT/X Consortium License
 
 
 ## Installation instructions
-run "./install".
-sudo is not supported.
+Run "./install".
+
+Sudo is not supported.
 
 
 ## Screenshots
