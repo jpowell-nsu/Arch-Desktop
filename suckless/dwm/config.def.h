@@ -33,7 +33,6 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -79,11 +78,12 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_red, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *ranger[]   = { "st", "-e", "ranger", NULL};
-static const char *htop[]   = { "st", "-e", "htop", NULL};
-static const char *rss[]   = { "st", "-e", "newsboat", NULL};
-static const char *mail[]   = { "st", "-e", "neomutt", NULL};
-static const char *firefox[]  = { "firefox", NULL};
+static const char *ranger[]   = { "st", "-e", "ranger", NULL };
+static const char *htop[]   = { "st", "-e", "htop", NULL };
+static const char *rss[]   = { "st", "-e", "newsboat", NULL };
+static const char *mail[]   = { "st", "-e", "neomutt", NULL };
+static const char *firefox[]  = { "firefox", NULL };
+static const char *connect[] = { "st", "-e", ".config/script.sh", NULL }; /*Portal*/
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -94,6 +94,7 @@ static const Key keys[] = {
     { MODKEY,                       XK_f,      spawn,          {.v = rss } },
 	{ MODKEY,                       XK_m,      spawn,          {.v = mail} },
     { MODKEY,                       XK_b,      spawn,          {.v = htop } },
+    { MODKEY,                       XK_x,      spawn,          {.v = connect } },
     { MODKEY,                       XK_t,      spawn,          SHCMD("maim ~/Pictures/$(date +%s).png") },
     { Mod1Mask|ShiftMask,           XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
