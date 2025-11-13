@@ -1,6 +1,8 @@
 #!/bin/sh
-cd dmenu &&  make && sudo make install clean && \
-cd ../dwm &&  make && sudo make install clean && \
-cd ../slock && make && sudo make install clean && \
-cd ../st &&  sudo make install clean && cd ../tabbed && \
-make && sudo make install clean
+cd dmenu &&  make && sudo make install clean &&
+cd ../dwm &&  make && sudo make install clean &&
+cd ../slock && make && sudo make install clean &&
+cd ../slstatus && make && sudo make install clean &&
+cd ../st &&  sudo make install clean &&
+cd ../tabbed && make && sudo make install clean &&
+cd ../sent && make && sudo make install clean
