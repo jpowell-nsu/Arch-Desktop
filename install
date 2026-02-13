@@ -1,4 +1,5 @@
 #!/bin/sh
+./pkginstall &&
 
 cp dots/.* ~/ & cp -r dots/neomutt ~/.config & cp -r dots/mpv ~/.config &&
 if [ ! -d ~/Media ]; then
